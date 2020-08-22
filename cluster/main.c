@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
 	printf("%d", *(P->head->indices + 4));
 
 	O = algorithm3(A, k, M, g_size);
-	O->head;
+	printf("ddcdcc");
 
 
 

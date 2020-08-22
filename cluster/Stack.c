@@ -41,7 +41,7 @@ void stack_push(struct _Stack *s, struct _Dicks *d) {
 		s->head = d;	
 		s->head->previous = tmp;
 	}
-	s->size -= 1;
+	s->size += 1;
 	
 }
 

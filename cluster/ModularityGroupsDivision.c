@@ -47,7 +47,7 @@ Stack* algorithm3(const struct _spmat *A, const int *k, int M, int size) {
 	int *indices1, *indices2, g_size;
 
 	int g1 = 0, g2 = 0, *g;
-	O = stack_allocate;
+	O = stack_allocate();
 	/*Initiate the starting step*/
 	P = initiate_P(size);
 	while (!(P->is_empty(P))) {
