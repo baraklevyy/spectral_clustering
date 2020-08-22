@@ -7,6 +7,7 @@
 #include "Stack.h"
 #include "SparseMatrix.h"
 #include "Algorithm2.h"
+#include "modularity_maximization.h"
 
 Stack* initiate_P(int size) {
 	Status status = INVALID_STATUS_CODE;
@@ -54,19 +55,20 @@ Stack* algorithm3(const struct _spmat *A, const int *k, int M, int size) {
 		d = P->pop(P);
 		g = d->indices;
 		g_size = d->size;
-		g1 = 0, g2 = 0;
+	/*	g1 = 0, g2 = 0;*/
 		int *s = (int*)malloc(g_size * sizeof(int));
 		if (NULL == s) {
 			status = MALLOC_FAILED_CODE;
 			get_error_message(status);
 			goto l_cleanup;
 		}
-		status = algorithm2(A, k, M, g, g_size, s, &g1, &g2);
+		status = algorithm2(A, k, M, g, g_size, s);
+	    status = modularity_max(A, k, M, g, g_size, s);
+		extract_vectors(g, g_size, s, indices1, indices2,&g1, &g2);
 		if (g1 == 0 || g2 == 0) {
 			O->push(O, d);
 			continue;
 		}
-		
 		indices1 = (int*)malloc(g1 * sizeof(int));
 		if (NULL == indices1) {
 			status = MALLOC_FAILED_CODE;
@@ -79,7 +81,6 @@ Stack* algorithm3(const struct _spmat *A, const int *k, int M, int size) {
 			get_error_message(status);
 			goto l_cleanup;
 		}
-		extract_vectors(g, g_size, s, indices1, indices2);
 		d1_tmp = (Dick*)malloc(sizeof(Dick));
 		if (NULL == d1_tmp) {
 			status = MALLOC_FAILED_CODE;
