@@ -134,10 +134,3 @@ l_cleanup:
 	}
 	return sp;
 }
-
-
-
-
-
-
-

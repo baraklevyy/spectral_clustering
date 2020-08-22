@@ -6,7 +6,7 @@
 #include "vector.h"
 #include "SparseMatrix.h"
 
-/*use flag == 0 if the use is regular i.e to calculate f_i_g .Otherwise use flag == 1 to include Kornecker delta for Matrix_shifting*/
+
 double f_i_g(const struct _spmat *A, const int *k, int M, const int *g, int g_size, int i) {
 	double res = 0;
 	const int *g_pointer = g;

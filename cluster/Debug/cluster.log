@@ -1,2 +1,6 @@
-﻿  main.c
+﻿  ModularityGroupsDivision.c
+c:\users\barak\source\repos\cluster\cluster\modularitygroupsdivision.c(50): warning C4047: '=': 'Stack *' differs in levels of indirection from 'Stack *(__cdecl *)()'
+c:\users\barak\source\repos\cluster\cluster\modularitygroupsdivision.c(64): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+c:\users\barak\source\repos\cluster\cluster\modularitygroupsdivision.c(64): warning C4024: 'algorithm2': different types for formal and actual parameter 7
+c:\users\barak\source\repos\cluster\cluster\modularitygroupsdivision.c(64): warning C4024: 'algorithm2': different types for formal and actual parameter 8
   cluster.vcxproj -> C:\Users\barak\source\repos\cluster\Debug\cluster.exe

@@ -126,7 +126,9 @@
     <ClInclude Include="Algorithm2.h" />
     <ClInclude Include="B.h" />
     <ClInclude Include="Common.h" />
+    <ClInclude Include="ModularityGroupsDivision.h" />
     <ClInclude Include="SparseMatrix.h" />
+    <ClInclude Include="Stack.h" />
     <ClInclude Include="Utility.h" />
     <ClInclude Include="vector.h" />
   </ItemGroup>
@@ -135,7 +137,9 @@
     <ClCompile Include="B.c" />
     <ClCompile Include="Common.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="ModularityGroupsDivision.c" />
     <ClCompile Include="SparseMatrix.c" />
+    <ClCompile Include="Stack.c" />
     <ClCompile Include="Utility.c" />
     <ClCompile Include="vector.c" />
   </ItemGroup>

@@ -11,16 +11,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 #include "SparseMatrix.h"
 #include "Common.h"
 #include "Utility.h"
 #include "B.h"
 #include "Algorithm2.h"
+#include "Stack.h"
+#include"ModularityGroupsDivision.h"
 
 int main(int argc, char *argv[]) {
 	Status status = INVALID_STATUS_CODE;
+	Stack *O, *P;
 	int g[] = {0,1,2,3,4};
-	int g_size = 5;
+	int g_size = 5 , gg1 = 0, gg2 = 0;
 	spmat *A;
 	int M, *k;
 	int n;
@@ -49,11 +53,20 @@ int main(int argc, char *argv[]) {
 	printf("\n");
 	
 	int s[] = { 0,0,0,0,0 };
-	algorithm2(A, k, M, g, g_size, s);
+	algorithm2(A, k, M, g, g_size, s, &gg1, &gg2);
 	printf("s: ");
 	for (int i = 0; i < g_size; i++)
 		printf("%d, ", s[i]);
 	printf("\n");
+	printf("g1 size is %d and g2 size is %d", gg1, gg2);
+	P = initiate_P(g_size);
+	printf("%d", *(P->head->indices + 4));
+
+	O = algorithm3(A, k, M, g_size);
+	O->head;
+
+
+
 
 	status = SUCCESS_STATUS_CODE;
 	return 0;
