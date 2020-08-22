@@ -35,6 +35,9 @@
     <ClInclude Include="ModularityGroupsDivision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="modularity_maximization.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -62,6 +65,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ModularityGroupsDivision.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="modularity_maximization.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -127,6 +127,7 @@
     <ClInclude Include="B.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="ModularityGroupsDivision.h" />
+    <ClInclude Include="modularity_maximization.h" />
     <ClInclude Include="SparseMatrix.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="Utility.h" />
@@ -138,6 +139,7 @@
     <ClCompile Include="Common.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="ModularityGroupsDivision.c" />
+    <ClCompile Include="modularity_maximization.c" />
     <ClCompile Include="SparseMatrix.c" />
     <ClCompile Include="Stack.c" />
     <ClCompile Include="Utility.c" />

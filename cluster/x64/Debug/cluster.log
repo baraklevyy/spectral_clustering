@@ -1,0 +1,7 @@
+﻿  Algorithm2.c
+  ModularityGroupsDivision.c
+  main.c
+c:\users\barak\documents\git\spectral_clustering\cluster\main.c(56): warning C4020: 'algorithm2': too many actual parameters
+  modularity_maximization.c
+  Generating Code...
+  cluster.vcxproj -> C:\Users\barak\Documents\Git\spectral_clustering\x64\Debug\cluster.exe

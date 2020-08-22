@@ -68,15 +68,24 @@ l_cleanup:
 	return status;
 }
 /*Extracting the 2 groups indices(from output of algorithm 2) */
-void extract_vectors(int *g, int g_size, int *s, int *v1, int *v2, int *g1_size, int *g2_size) {
+void extract_vectors(int *g, int g_size, int *s, int *v1, int *v2) {
 	int i;
 	for  (i = 0; i < g_size; i++){
 		if (*(s + i) == 1) {
 			*(v1++) = *(g + i);
-			*(g1_size) = *(g1_size) + 1;
 		}
 		else {
 			*(v2++) = *(g + i);
+		}
+	}
+}
+void extract_vectors_sizes(int g_size, int *s, int *g1_size, int *g2_size) {
+	int i;
+	for (i = 0; i < g_size; i++) {
+		if (*(s + i) == 1) {
+			*(g1_size) = *(g1_size)+1;
+		}
+		else {
 			*(g2_size) = *(g2_size)+1;
 		}
 	}
