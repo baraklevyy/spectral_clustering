@@ -8,25 +8,36 @@
 
 
 double f_i_g(const struct _spmat *A, const int *k, int M, const int *g, int g_size, int i) {
-	double res = 0;
+	double res = 0.0;
 	const int *g_pointer = g;
 	int g_i = 0;
 	node **rows = A->private;
 	node *current = rows[i];/*first element in the list[i]*/
 
-	while (NULL != current && g_i < g_size) {
-		if (current->col > *(g_pointer + g_i))
-			g_i++;
-		else if (current->col < *(g_pointer + g_i))
-			current = current->next;
+	while (g_i < g_size) {
+		if (NULL != current){
+			if (current->col > *(g_pointer + g_i)) {
+				res -= ((double)k[i] * (double)k[*(g_pointer + g_i)]) / (double)M;
+				g_i++;
+				continue;
+			}
+			else if (current->col < *(g_pointer + g_i)) {
+				current = current->next;
+				continue;
+			}
+			else {/*Element in A*/
+				res += (1.0 - ((double)k[i] * (double)k[current->col]) / (double)M);
+				current = current->next;
+				g_i++;
+				continue;
+			}	
+		}
 		else {
-			res += (1.0 - ((double)k[i] * (double)k[current->col]) / (double)M);
-			
-			current = current->next;
+			res -= ((double)k[i] * (double)k[*(g_pointer + g_i)]) / (double)M;
 			g_i++;
+			continue;
 		}
 	}
-
 	return res;
 }
 

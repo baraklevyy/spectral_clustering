@@ -12,10 +12,10 @@ Status generate_graph() {
 	Status status = INVALID_STATUS_CODE;
 	FILE *file;
 	int sanity_check;
-	int arr[16] = {5,3,1,3,4,2,0,4,1,3,2,0,2,2,0,1 };
+	int arr[32] = {9, 2,7,8, 2,2,3, 3,1,3,4, 2,1,2, 3,2,4,6, 2,4,6, 3,4,5,8, 2,0,8, 3,0,6,7};
 	file = fopen("graph.in", "wb");
-	sanity_check = fwrite(arr, sizeof(int), 16, file);
-	if (16 != sanity_check) {
+	sanity_check = fwrite(arr, sizeof(int), 32, file);
+	if (32 != sanity_check) {
 		status = FREAD_FAILED_CODE;
 		get_error_message(status);
 		goto l_cleanup;

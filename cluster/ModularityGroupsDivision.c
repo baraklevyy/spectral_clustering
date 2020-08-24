@@ -63,7 +63,7 @@ Stack* algorithm3(const struct _spmat *A, const int *k, int M, int size) {
 			goto l_cleanup;
 		}
 		status = algorithm2(A, k, M, g, g_size, s);
-	    status = modularity_max(A, k, M, g, g_size, s);
+	    /*status = modularity_max(A, k, M, g, g_size, s);*/
 		extract_vectors_sizes(g_size, s, &g1, &g2);
 		indices1 = (int*)malloc(g1 * sizeof(int));
 		if (NULL == indices1) {

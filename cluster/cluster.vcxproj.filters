@@ -75,5 +75,8 @@
     <None Include="graph.in">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="..\..\..\..\eclipse-workspace\Clustering\graph4.in">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

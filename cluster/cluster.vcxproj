@@ -146,6 +146,7 @@
     <ClCompile Include="vector.c" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\..\eclipse-workspace\Clustering\graph4.in" />
     <None Include="graph.in" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
